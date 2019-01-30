@@ -1,20 +1,22 @@
-import Utility from '../utility/Utility';
+import Utility from 'js/utility/Utility';
 import { TweenLite } from 'gsap';
 
 export default class Anim {
 
     constructor() {
-
-        // # default css
-        // elm {
-        //     display: none
-        //     opacity: 0
-        //     visibility: hidden
-        // }
-
     }
 
-    fadeIn(elm, duration, delay) {
+    /**
+     *
+     * @type {fadeIn}
+     * @param
+     * .default_css {
+     *     display: none
+     *     opacity: 0
+     *     visibility: hidden
+     * }
+     */
+    static fadeIn(elm, duration, delay) {
 
         TweenLite.set(elm, {
             display: 'block',
@@ -32,7 +34,7 @@ export default class Anim {
 
     }
 
-    fadeOut(elm, duration, delay) {
+    static fadeOut(elm, duration, delay) {
 
         TweenLite.to(elm, duration, {
             opacity: 0,
